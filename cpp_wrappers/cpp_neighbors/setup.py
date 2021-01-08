@@ -6,6 +6,8 @@ import numpy.distutils.misc_util
 
 # Adding sources of the project
 # *****************************
+# import numpy.distutils.misc_util
+# import numpy
 
 SOURCES = ["../cpp_utils/cloud/cloud.cpp",
              "neighbors/neighbors.cpp",
@@ -17,6 +19,7 @@ module = Extension(name="radius_neighbors",
                                         '-D_GLIBCXX_USE_CXX11_ABI=0'])
 
 
+# setup(ext_modules=[module], include_dirs=numpy.distutils.misc_util.get_numpy_include_dirs())
 setup(ext_modules=[module], include_dirs=numpy.distutils.misc_util.get_numpy_include_dirs())
 
 
